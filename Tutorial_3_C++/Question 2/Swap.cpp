@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+//void swap(int &num1, int &num2);
+void swap_v2(int *num1, int *num2);
+
+int main(){
+    int x= 2, y= 4;
+    int *eks= &x;
+    int *wai= &y;
+    
+    cout<< "\n x = "<< x;
+    cout<< "\n y = "<< y;
+
+    swap_v2( &x, &y);
+
+    cout<< "\n After swapping ";
+    cout<< "\n x = "<< x;
+    cout<< "\n y = "<< y;
+}
+
+/*void swap(int &num1, int &num2){
+
+    int temp;
+    temp= num1;
+    num1= num2;
+    num2= temp;
+}*/
+
+void swap_v2(int *num1, int *num2){
+    int temp;
+    temp= *num1;
+    *num1= *num2;
+    *num2= temp;
+}
