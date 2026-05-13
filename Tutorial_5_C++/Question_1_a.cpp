@@ -5,6 +5,10 @@ class Fraction{ //yg ni class.
         int numerator, denominator; //Yg ni Data mmbrs.
 
     public:
+        Fraction(){
+
+        }
+
         Fraction (int numerator, int denominator){ //yg ni constructor.
             this-> numerator= numerator;
             this-> denominator= denominator;
@@ -12,7 +16,7 @@ class Fraction{ //yg ni class.
 
         Fraction add(Fraction f){
 
-            Fraction result(0, 0);
+            Fraction result;
             result.numerator= (numerator* f.denominator)+(f.numerator*denominator);
             result.denominator= (denominator* f.denominator);
 
@@ -20,7 +24,7 @@ class Fraction{ //yg ni class.
         }
 
         Fraction multiply(Fraction f){
-            Fraction result(0, 0);
+            Fraction result;
             result.numerator= numerator* f.numerator;
             result.denominator= denominator* f.denominator;
 
@@ -36,7 +40,7 @@ int main() {
 
     Fraction f1(3, 4);
     Fraction f2(1, 2);
-    Fraction result(0, 0);
+    Fraction result;
 
     std::cout << "f1: ";
     f1.display();
